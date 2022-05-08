@@ -33,6 +33,16 @@
 };
 
 / {
+        behaviors {
+                td_tog_nq: tap_dance_tog_nq {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_TOG_NAV_QWERTY";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&tog NAV>, <&tog QWERTY>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -46,7 +56,7 @@
    &kp ESC   &kp Q &kp W &kp F    &kp P            &kp B         &kp J          &kp L    &kp U     &kp Y   &kp MINUS        &kp PSCRN
    &kp LCTRL &kp A &kp R &kp S    &kp T            &kp G         &kp M          &kp N    &kp E     &kp I   &kp O            &kp SQT
    &kp LSHFT &kp Z &kp X &kp C    &kp D            &kp V         &kp K          &kp H    &kp COMMA &kp DOT &lt KEYPAD FSLH  &kp LGUI
-                         &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET  &kp BSPC &tog NAV
+                         &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET  &kp BSPC &td_tog_nq
                         >;
                 };
 
@@ -60,7 +70,7 @@
    &none      &none   &none   &none    &none            &none         &none         &none    &none     &none     &kp EQUAL &kp CAPS
    &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4           &kp N5        &kp N6        &kp N7   &kp N8    &kp N9    &kp N0    &kp SEMI
    &kp LSHFT  &none   &none   &none    &none            &none         &none         &none    &kp LBKT  &kp RBKT  &none     &kp LGUI
-                              &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET &kp BSPC &tog NAV
+                              &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET &kp BSPC &td_tog_nq
                         >;
                 };
 
@@ -74,7 +84,7 @@
    &none     &kp F1   &kp F2   &kp F3   &kp F4           &kp F5        &none         &kp INS  &kp HOME  &kp LPAR  &kp PAUSE_BREAK  &kp SLCK
    &kp LCTRL &kp F6   &kp F7   &kp F8   &kp F9           &kp F10       &none         &kp LEFT &kp DOWN  &kp UP    &kp RIGHT        &none
    &kp LSHFT &none    &none    &none    &kp F11          &kp F12       &none         &kp DEL  &kp PG_DN &kp PG_UP &kp K_APP        &kp LGUI
-                    	       &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET &kp BSPC &tog NAV
+                    	       &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET &kp BSPC &td_tog_nq
                         >;
                 };
 
@@ -88,7 +98,7 @@
    &kp K_PWR  &none        &none        &none        &none             &none          &none         &none    &none  &none  &none  &zed_em_kay
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3      &bt BT_SEL 4   &none         &none    &none  &none  &none  &none
    &kp LSHFT  &none        &none        &none        &none             &none          &none         &none    &none  &none  &none  &none
-                          	        &kp LALT     &lt NUMROW SPACE  &kp TAB        &lt MEDIA RET &kp BSPC &tog NAV
+                          	        &kp LALT     &lt NUMROW SPACE  &kp TAB        &lt MEDIA RET &kp BSPC &td_tog_nq
                         >;
                 };
 
@@ -116,7 +126,7 @@
    &kp ESC   &kp Q &kp W &kp E    &kp R            &kp T         &kp Y          &kp U    &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D    &kp F            &kp G         &kp H          &kp J    &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C    &kp V            &kp B         &kp N          &kp M    &kp COMMA &kp DOT &kp FSLH &kp ESC
-                         &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET  &kp BSPC &tog NAV
+                         &kp LALT &lt NUMROW SPACE &kp TAB       &lt MEDIA RET  &kp BSPC &td_tog_nq
                         >;
                 };
 
